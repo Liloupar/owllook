@@ -6,7 +6,7 @@ services:
     ports:
       - "8001:8001"
 #    volumes:
-#      - .:/
+#      - .:/owllook
   mongo:
     image: mongo:3.2.11
     volumes:
