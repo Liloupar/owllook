@@ -4,8 +4,8 @@ MAINTAINER howie6879 <howie6879@gmail.com>
 ENV TIME_ZONE=Asia/Shanghai
 RUN echo "${TIME_ZONE}" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
-ADD . /owllook
-WORKDIR /owllook
+ADD . /
+WORKDIR /
 RUN pip install --no-cache-dir --trusted-host mirrors.aliyun.com -i http://mirrors.aliyun.com/pypi/simple/ pipenv
 RUN pipenv install --skip-lock
 RUN find . -name "*.pyc" -delete
