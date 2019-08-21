@@ -5,8 +5,8 @@ services:
     command: pipenv run gunicorn -c /owllook/config/gunicorn.py --worker-class sanic.worker.GunicornWorker owllook.server:app
     ports:
       - "8001:8001"
-    volumes:
-      - .:/
+#    volumes:
+#      - .:/
   mongo:
     image: mongo:3.2.11
     volumes:
