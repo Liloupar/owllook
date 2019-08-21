@@ -14,7 +14,7 @@ class DevConfig(Config):
     # Database config
     REDIS_DICT = dict(
         IS_CACHE=True,
-        REDIS_ENDPOINT=os.getenv('REDIS_ENDPOINT', "redis"),
+        REDIS_ENDPOINT=os.getenv('REDIS_ENDPOINT', "owllook_redis_1"),
         REDIS_PORT=int(os.getenv('REDIS_PORT', 6379)),
         REDIS_PASSWORD=os.getenv('REDIS_PASSWORD', None),
         CACHE_DB=0,
@@ -22,7 +22,7 @@ class DevConfig(Config):
         POOLSIZE=10,
     )
     MONGODB = dict(
-        MONGO_HOST=os.getenv('MONGO_HOST', "mongo"),
+        MONGO_HOST=os.getenv('MONGO_HOST', "owllook_web_1"),
         MONGO_PORT=int(os.getenv('MONGO_PORT', 27017)),
         MONGO_USERNAME=os.getenv('MONGO_USERNAME', ""),
         MONGO_PASSWORD=os.getenv('MONGO_PASSWORD', ""),
